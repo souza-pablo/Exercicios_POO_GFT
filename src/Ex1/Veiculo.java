@@ -1,4 +1,4 @@
-package gft.starter;
+package Ex1;
 
 public class Veiculo {
     private String marca;

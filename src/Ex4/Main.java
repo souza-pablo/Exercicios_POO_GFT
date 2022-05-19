@@ -1,8 +1,11 @@
-package gft.starter;
+package Ex4;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
 
-public class Ex4 {
+public class Main {
     public static void main(String[] args) {
         Map<String, Integer> listaPessoas = new LinkedHashMap<>(){{
             put("João", 15);
@@ -17,7 +20,7 @@ public class Ex4 {
         String pessoaMaisVelha = "";
 
         for (Map.Entry<String, Integer> entry: entries) {
-         if (entry.getValue().equals(maiorIdade)) pessoaMaisVelha = entry.getKey();
+            if (entry.getValue().equals(maiorIdade)) pessoaMaisVelha = entry.getKey();
         }
         System.out.println("A pessoa mais velha é: " + pessoaMaisVelha);
 

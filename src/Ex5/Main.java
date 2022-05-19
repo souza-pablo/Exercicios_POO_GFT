@@ -1,11 +1,10 @@
-package gft.starter;
+package Ex5;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class Ex5 {
+public class Main {
     public static void main(String[] args) {
         Map<String, Integer> listaPessoas = new HashMap<>(){{
             put("João", 15);
