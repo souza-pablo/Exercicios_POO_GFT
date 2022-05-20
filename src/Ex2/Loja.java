@@ -1,6 +1,8 @@
 package Ex2;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.function.Function;
 
 public class Loja {
     private String nome;
@@ -46,6 +48,9 @@ public class Loja {
     }
 
     public double calculaPatrimonio() {
+
+
+        System.out.println("O patrimõnio da loja: " + this.getNome() + " é de " + "R$ " );
         return 0d;
     }
 
