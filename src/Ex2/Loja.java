@@ -20,16 +20,33 @@ public class Loja {
     }
 
 
-    public void listaLivros(){
-
+    public void listaLivros() {
+        System.out.println();
+        if (livros == null || livros.size() == 0) {
+            System.out.println("A loja não tem livros no seu estoque.");
+        } else {
+            System.out.println("A loja Americanas possui estes livros para venda:");
+            for (int i = 0; i < livros.size(); i++) {
+                System.out.println("Título: " + livros.get(i).getNome() + ", preço: " + livros.get(i).getPreco() + ", quantidade: " + livros.get(i).getQtd() + " em estoque.");
+            }
+        }
+        System.out.println();
     }
 
-    public void listaVideoGames(){
-
+    public void listaVideoGames() {
+        if (videoGames == null || videoGames.size() == 0) {
+            System.out.println("A loja não tem livros no seu estoque.");
+        } else {
+            System.out.println("A loja Americanas possui estes video-games para venda:");
+            for (int i = 0; i < videoGames.size(); i++) {
+                System.out.println("Título: " + videoGames.get(i).getNome() + ", preço: " + videoGames.get(i).getPreco() + ", quantidade: " + videoGames.get(i).getQtd() + " em estoque.");
+            }
+        }
+        System.out.println();
     }
 
-    public double calculaPatrimonio(){
-
+    public double calculaPatrimonio() {
+        return 0d;
     }
 
     public String getNome() {
@@ -64,3 +81,4 @@ public class Loja {
         this.videoGames = videoGames;
     }
 }
+

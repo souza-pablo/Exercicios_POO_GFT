@@ -14,7 +14,7 @@ public class Guerreiro {
 
     }
 
-    public void aprenderHabilidade(String){
+    public void aprenderHabilidade(){
 
     }
 

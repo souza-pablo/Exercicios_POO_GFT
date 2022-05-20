@@ -14,7 +14,7 @@ public class Mago {
     public void attack(){
 
     }
-    public void aprenderMagia(String){
+    public void aprenderMagia(String c){
 
     }
 
