@@ -14,11 +14,12 @@ public class Vendedor extends Funcionario{
                 '}';
     }
 
-    public Vendedor(String nome, int idade, Double salario) {
-        super(nome, idade, salario);
+    public Vendedor(String nome, int idade, Double salario, Double bonus) {
+        super(nome, idade, salario, bonus);
     }
 
     public  void bonificacao(){
-        this.setBonus(this.getSalario() + 3000.0d);
+
+        this.setBonus(this.getBonus() + this.getSalario() + 3000.0d);
     }
 }

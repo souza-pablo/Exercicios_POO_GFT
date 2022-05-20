@@ -7,13 +7,15 @@ public class Funcionario {
     protected Double bonus;
 
     public  void bonificacao(){
+
         this.setBonus(this.getSalario());
     }
 
-    public Funcionario(String nome, int idade, Double salario) {
+    public Funcionario(String nome, int idade, Double salario, Double bonus) {
         this.nome = nome;
         this.idade = idade;
         this.salario = salario;
+        this.bonus = bonus;
     }
 
 

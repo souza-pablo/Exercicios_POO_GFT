@@ -14,11 +14,11 @@ public class Supervisor extends Funcionario{
                 '}';
     }
 
-    public Supervisor(String nome, int idade, Double salario) {
-        super(nome, idade, salario);
+    public Supervisor(String nome, int idade, Double salario, Double bonus) {
+        super(nome, idade, salario, bonus);
     }
 
     public  void bonificacao(){
-        this.setBonus(this.getSalario() + 5000.0d);
+        this.setBonus(this.getBonus() + this.getSalario() + 5000.0d);
     }
 }
