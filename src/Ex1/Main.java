@@ -1,10 +1,8 @@
 package Ex1;
 
-import gft.starter.Veiculo;
-
 public class Main {
     public static void main(String[] args) {
-        gft.starter.Veiculo veiculo = new Veiculo();
+        Veiculo veiculo = new Veiculo();
         veiculo.setCor("azul");
         veiculo.setMarca("BMW");
         veiculo.setModelo("X6");
@@ -16,7 +14,7 @@ public class Main {
         veiculo.acelerar();
         veiculo.acelerar();
         veiculo.frear();
-        veiculo.pintar("vermelho");
+        veiculo.pintar("vermelha");
         veiculo.desligar();
         veiculo.abastecer(50);
         veiculo.abastecer(10);
