@@ -35,7 +35,7 @@ public class Loja {
 
     public void listaVideoGames() {
         if (videoGames == null || videoGames.size() == 0) {
-            System.out.println("A loja não tem livros no seu estoque.");
+            System.out.println("A loja não tem video-games no seu estoque.");
         } else {
             System.out.println("A loja Americanas possui estes video-games para venda:");
             for (int i = 0; i < videoGames.size(); i++) {
