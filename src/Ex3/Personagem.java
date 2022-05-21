@@ -1,6 +1,6 @@
 package Ex3;
 
-public class Personagem {
+public abstract class Personagem {
     private String nome;
     private int vida;
     private int mana;
@@ -8,12 +8,10 @@ public class Personagem {
     private int inteligencia;
     private int forca;
     private int level;
+    private static int contaPersonagens;
 
+    public Personagem() {
 
-    public void lvlUp() {
-
-        this.setXp(getXp() + 5.0f);
-        this.setLevel(getLevel() + 1);
     }
 
     public Personagem(String nome, int vida, int mana, float xp, int inteligencia, int forca, int level) {
@@ -24,6 +22,11 @@ public class Personagem {
         this.inteligencia = inteligencia;
         this.forca = forca;
         this.level = level;
+    }
+
+    public void lvlUp() {
+
+        this.setXp(getXp() + 5.0f);
     }
 
     public String getNome() {
