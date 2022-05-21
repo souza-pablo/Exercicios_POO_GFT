@@ -39,7 +39,7 @@ public class Loja {
         } else {
             System.out.println("A loja Americanas possui estes video-games para venda:");
             for (int i = 0; i < videoGames.size(); i++) {
-                System.out.println("Título: " + videoGames.get(i).getNome() + ", preço: " + videoGames.get(i).getPreco() + ", quantidade: " + videoGames.get(i).getQtd() + " em estoque.");
+                System.out.println("Video-game: " + videoGames.get(i).getModelo() + ", preço: " + videoGames.get(i).getPreco() + ", quantidade: " + videoGames.get(i).getQtd() + " em estoque.");
             }
         }
         System.out.println();
