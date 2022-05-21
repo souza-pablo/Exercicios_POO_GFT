@@ -25,10 +25,8 @@ public class Main {
 
         Loja americanas = new Loja("Americanas", "12345678", livros, games);
 
-
         l2.calculaImposto();
         l3.calculaImposto();
-
         ps4Usado.calculaImposto();
         ps4.calculaImposto();
 

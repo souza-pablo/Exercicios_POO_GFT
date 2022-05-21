@@ -1,8 +1,6 @@
 package Ex2;
 
-import java.util.Iterator;
 import java.util.List;
-import java.util.function.Function;
 
 public class Loja {
     private String nome;
@@ -48,10 +46,29 @@ public class Loja {
     }
 
     public double calculaPatrimonio() {
+        double patrimonioLivros = 0;
+        for (int i = 0; i < livros.size(); i++){
+            patrimonioLivros = patrimonioLivros + (livros.get(i).getPreco() * livros.get(i).getQtd());
+        }
 
+        double patrimonioVideoGames = 0;
+        for (int i = 0; i < videoGames.size(); i++){
+            patrimonioVideoGames = patrimonioVideoGames + (videoGames.get(i).getPreco() * videoGames.get(i).getQtd());
+        }
 
-        System.out.println("O patrimõnio da loja: " + this.getNome() + " é de " + "R$ " );
+        double patrimonioLoja = patrimonioLivros + patrimonioVideoGames;
+        System.out.println("O patrimõnio da loja: " + this.getNome() + " é de " + "R$ " + patrimonioLoja);
         return 0d;
+    }
+
+    @Override
+    public String toString() {
+        return "Loja{" +
+                "nome='" + nome + '\'' +
+                ", cnpj='" + cnpj + '\'' +
+                ", livros=" + livros +
+                ", videoGames=" + videoGames +
+                '}';
     }
 
     public String getNome() {
