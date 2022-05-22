@@ -6,9 +6,9 @@ public class Funcionario {
     protected Double salario;
     protected Double bonus;
 
-    public  void bonificacao(){
-
-        this.setBonus(this.getSalario());
+    public void bonificacao() {
+        this.setBonus(this.getBonus() + this.getSalario());
+        System.out.println("Bonificação do funcionário " + this.getNome() + ": R$" + this.getBonus());
     }
 
     public Funcionario(String nome, int idade, Double salario, Double bonus) {
@@ -18,14 +18,12 @@ public class Funcionario {
         this.bonus = bonus;
     }
 
-
     @Override
     public String toString() {
         return "Funcionario{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", salario=" + salario + ", bonificação=" + this.getBonus() +
-                '}';
+                "nome: '" + nome + '\'' +
+                ", idade: " + idade +
+                ", salario: R$" + salario + '}';
     }
 
     public String getNome() {

@@ -6,17 +6,17 @@ public class Gerente extends Funcionario{
         super(nome, idade, salario, bonus);
     }
 
+    public  void bonificacao(){
+        this.setBonus(this.getBonus() + this.getSalario() + 10000.0d);
+        System.out.println("Bonificação do funcionário " + this.getNome() + ": R$" + this.getBonus());
+    }
+
     @Override
     public String toString() {
         return "Gerente{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", salario=" + salario + ", bonificação=" + this.getBonus() +
-                '}';
-    }
-
-    public  void bonificacao(){
-        this.setBonus(this.getBonus() + this.getSalario() + 10000.0d);
+                "nome: '" + nome + '\'' +
+                ", idade: " + idade +
+                ", salário: R$" + salario + '}';
     }
 
 }
