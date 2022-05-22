@@ -8,7 +8,7 @@ public abstract class Personagem {
     private int inteligencia;
     private int forca;
     private int level;
-    private static int contaPersonagens;
+    protected static int totalPersonagens = 0;
 
     public Personagem() {
 
@@ -26,7 +26,6 @@ public abstract class Personagem {
 
     public void lvlUp() {
 
-        this.setXp(getXp() + 5.0f);
     }
 
     public String getNome() {
