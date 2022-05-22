@@ -12,22 +12,27 @@ public class Veiculo {
     private Double preco;
 
     public void acelerar(){
-        if (this.isLigado == true){
+        if (this.isLigado){
             this.setVelocidade(this.getVelocidade() + 20);
             System.out.println("Acelerando!!!");
         } else {
             System.out.println("Não é possível acelerar o carro desligado!");
         }
     }
+
     public void abastecer(int combustivel){
-        if (this.litrosCombustivel <=60 && this.litrosCombustivel + combustivel<=60) {
+        if (this.litrosCombustivel <= 60 && this.litrosCombustivel + combustivel <= 60 && this.velocidade == 0) {
             this.litrosCombustivel = this.litrosCombustivel + combustivel;
-            System.out.println("Abastecendo!");
+            System.out.println("Abastecendo " + combustivel +" litros!");
+        }
+        else if (this.velocidade > 0){
+            System.out.println("Não é possível abastecer com o carro em movimento!");
         }
         else {
             System.out.println("Não é possível abastecer esse valor, o tanque tem 60 litros!");
         }
     }
+
     public void frear(){
         if (this.getVelocidade() == 0) System.out.println("Não tem como frear, o veículo já está parado!");
         else {
@@ -35,20 +40,28 @@ public class Veiculo {
             System.out.println("Freando!!!");
         }
     }
+
     public void pintar(String cor){
-        this.cor = cor;
-        System.out.println("Seu veículo agora tem a cor " + this.getCor());
+        if (this.getVelocidade() == 0){
+            this.cor = cor;
+            System.out.println("Pintando...");
+            System.out.println("Seu veículo agora tem a cor " + this.getCor());
+        } else {
+            System.out.println("Não é possível pintar o veículo em movimento!");
+        }
     }
+
     public void ligar(){
-        if (isLigado == true) System.out.println("O carro já está ligado!");
+        if (isLigado) System.out.println("O carro já está ligado!");
         else {
             this.isLigado = true;
             System.out.println("Carro ligado com sucesso!");
         }
     }
+
     public void desligar(){
-        if (isLigado == false) System.out.println("O carro já está desligado!");
-        else if (this.isLigado == true &&  this.getVelocidade() == 0){
+        if (!isLigado) System.out.println("O carro já está desligado!");
+        else if (this.getVelocidade() == 0){
             this.isLigado = false;
             System.out.println("Carro desligado com sucesso!");
         }
@@ -56,16 +69,26 @@ public class Veiculo {
             System.out.println("É preciso parar o carro para desligar!");
         }
     }
-    public void status(){
-        System.out.println("Marca do Veículo: " + this.getMarca());
-        System.out.println("Modelo: " + this.getModelo());
-        System.out.println("Placa: " + this.getPlaca());
-        System.out.println("Cor: " + this.getCor());
-        System.out.println("Km " + this.getKm() + "km");
-        System.out.println("Está ligado? " + this.isLigado);
-        System.out.println("Quantidade de combustível " + this.getLitrosCombustivel());
-        System.out.println("Velocidade " + this.getVelocidade());
-        System.out.println("Preço " + this.getPreco() + "R$");
+
+    @Override
+    public String toString() {
+        String ligado;
+        if (isLigado){
+            ligado = "sim";
+        } else {
+            ligado = "não";
+        }
+        return "Veiculo{" +
+                "marca: '" + marca + '\'' +
+                ", modelo: '" + modelo + '\'' +
+                ", placa: '" + placa + '\'' +
+                ", cor: '" + cor + '\'' +
+                ", quilômetros rodados: " + km + "km" +
+                ", está ligado? " + ligado +
+                ", quantidade de combustível: " + litrosCombustivel + " litros" +
+                ", velocidade: " + velocidade + "km/h" +
+                ", preço: R$" + preco +
+                '}';
     }
 
     public String getMarca() {
