@@ -6,3 +6,5 @@ Se possível queria uma ajuda no último método do exercício 2, que serve para
 IDE utilizada: IntelliJ 
 
 Update: consegui resolver o método de calcular patrimônio no exercício 2!!!
+
+Tentando enviar ao GitLab...
