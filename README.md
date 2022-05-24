@@ -3,8 +3,6 @@ Os exercícios foram separados em pacotes, cada pacote com um exercício, assim,
 
 Se possível queria uma ajuda no último método do exercício 2, que serve para calcular o patrimônio, mesmo sendo apenas multiplicar os preços dos produtos e suas quantidade e somar os tipos, não consegui converter a Lista para um valor Double para que pudesse calcular.
 
-IDE utilizada: IntelliJ 
+IDE utilizada: IntelliJ
 
 Update: consegui resolver o método de calcular patrimônio no exercício 2!!!
-
-Tentando enviar ao GitLab...
